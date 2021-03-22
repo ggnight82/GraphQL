@@ -23,14 +23,14 @@ export const getMovies = async (limit, rating) => {
 export const getMovie = async id => {
     const {
         data: {
-            data : {movies}
+            data : {movie}
         }
     } = await axios(MOVIE_DETAILS_URL, {
         params: {
             movie_id: id
         }
     });
-    return movies;
+    return movie;
 };
 export const getSuggestion = async id => {
     const {
@@ -41,6 +41,6 @@ export const getSuggestion = async id => {
         params: {
             movie_id: id
         }
-    });
-    return movies
+    }); 
+    return movies;
 }
